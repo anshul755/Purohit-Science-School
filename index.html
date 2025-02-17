@@ -14,7 +14,7 @@
             <div class="logo">
                 <a href="#home">
                     <img src="images/logo.png" alt="Purohit Science School Logo">
-                    <span class="school-name">Purohit Science School, Jamnagar. <br>One Team, One Dream.</span>
+                    <span class="school-name"><h3>Purohit Science School, Jamnagar.</h3><h6>One Team, One Dream.</h6></span>
                 </a>
             </div>
             <ul class="nav-links">
@@ -48,23 +48,45 @@
                 const title = document.getElementById("hero-title");
                 const subtitle = document.getElementById("hero-subtitle");
 
+                let titleText = "";
+                let subtitleText = "";
+
                 if (hour < 12 && hour >= 6) {
-                    title.innerText = "Good Morning! Welcome to Purohit Science School";
-                    subtitle.innerText = "Start Your Day with Knowledge";
+                    titleText = "Good Morning! Welcome to Purohit Science School";
+                    subtitleText = "Start Your Day with Knowledge";
                 } else if (hour < 18 && hour >= 12) {
-                    title.innerText = "Good Afternoon! Keep Exploring Knowledge";
-                    subtitle.innerText = "Discover, Learn, and Innovate";
+                    titleText = "Good Afternoon! Keep Exploring Knowledge";
+                    subtitleText = "Discover, Learn, and Innovate";
                 } else if (hour < 20 && hour >= 18) {
-                    title.innerText = "Good Evening! Keep Exploring Big";
-                    subtitle.innerText = "Knowledge Never get Tired, and Neither Do We";
+                    titleText = "Good Evening! Keep Exploring Big";
+                    subtitleText = "Knowledge Never Gets Tired, and Neither Do We";
+                } else {
+                    titleText = "Good Night! Keep Dreaming Big";
+                    subtitleText = "Knowledge Never Sleeps, and Neither Do We";
                 }
-                else {
-                    title.innerText = "Good Night! Keep Dreaming Big";
-                    subtitle.innerText = "Knowledge Never Sleeps, and Neither Do We";
+
+                function typeWriterEffect(element, text, speed, callback) {
+                    let i = 0;
+                    function type() {
+                        if (i < text.length) {
+                            element.innerHTML += text.charAt(i);
+                            i++;
+                            setTimeout(type, speed);
+                        } else if (callback) {
+                            setTimeout(callback, 500); // Small delay before the next text starts
+                        }
+                    }
+                    type();
                 }
+
+                title.innerHTML = ""; // Clear existing text
+                subtitle.innerHTML = "";
+
+                typeWriterEffect(title, titleText, 50, function () {
+                    typeWriterEffect(subtitle, subtitleText, 30);
+                });
             });
         </script>
-
 
         <!-- About Section -->
         <section id="about" class="section">
@@ -153,25 +175,27 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <p>
-                    <h4><strong>Main Branch:</strong></h4>
+                    <h3><strong>Main Branch:</strong></h3>
                     <a href="https://maps.app.goo.gl/wQ7Q1eRixwPUyg5XA" target="_blank" rel="noopener noreferrer">
                         Mehulnagar, Nr. pragatipark, Jamnagar, 80 Feet Road, Jamnagar, Gujarat 361006
                     </a>
                     </p>
                     <p>
-                    <h4><strong>Samarpan Branch:</strong> </h4>
+                    <h3><strong>Samarpan Branch:</strong> </h3>
                     <a href="https://maps.app.goo.gl/bMGKhBAhuyxFyUVH7" target="_blank" rel="noopener noreferrer">
                         Samarpan Circle, Vasa Vira Society, Ajanta Society, Jamnagar, Gujarat 361005
                     </a>
                     </p>
                     <p>
-                    <h4><strong>Sunshine Branch:</strong> </h4>
+                    <h3><strong>Sunshine Branch:</strong> </h3>
                     <a href="https://maps.app.goo.gl/VFWTP2qVx3BSdj6b9" target="_blank" rel="noopener noreferrer">
                         Phase 2, Valkeshwari, Park Colony, Jamnagar, Gujarat 361008
                     </a>
                     </p>
-                    <p><strong>Phone:</strong> 9512812836</p>
-                    <p><strong>Email:</strong> shivamramoliya2005@gmail.com</p>
+                    <p>
+                    <h3><strong>Phone:</strong></h3> 9512812836</p>
+                    <p>
+                    <h3><strong>Email:</strong></h3> shivamramoliya2005@gmail.com</p>
                 </div>
                 <form id="contact-form" class="contact-form">
                     <input id="name" type="text" placeholder="Your Name" required>

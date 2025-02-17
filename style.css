@@ -26,17 +26,21 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.7);
     align-items: center;
-    padding: 10px 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 120px;
+    /* Reduced height */
+    padding: 5px 5%;
+    /* Reduced padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.5rem 5%;
+    /* Adjusted padding */
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -53,20 +57,23 @@ header {
 }
 
 .logo img {
-    height: 100px; /* Adjust the logo size */
+    height: 100px;
+    /* Reduced logo size */
     width: auto;
-    margin-right: 20px; /* Space between logo and name */
+    margin-right: 15px;
 }
 
 .school-name {
-    font-size: 2rem; /* Adjust text size */
+    font-size: 2rem;
+    /* Reduced font size */
     font-weight: bold;
-    color: #2c3e50; /* Adjust color */
+    color: var(--primary-color);
     transition: color 0.3s ease;
+    padding-bottom: 5px;
 }
 
 .logo a:hover .school-name {
-    color: #3498db; /* Change color on hover */
+    color: var(--secondary-color);
 }
 
 .nav-links {
@@ -87,13 +94,17 @@ header {
     color: var(--secondary-color);
 }
 
+/* Fix Overlapping Sections */
+section {
+    scroll-margin-top: 55px;
+    /* Prevents content from being hidden under fixed header */
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(48, 60, 155, 0.5), rgba(0, 0, 0, 0.5)),
-                url('images/hero-bg.jpg') no-repeat center center/cover;
-    background-size: cover;
-    background-position: center;
+        url('images/hero-bg.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,7 +195,7 @@ header {
     background: var(--white);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -195,11 +206,6 @@ header {
 .stream-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-}
-
-.stream-card ul {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
 }
 
 /* People Section */
@@ -213,7 +219,7 @@ header {
 .people-card {
     text-align: center;
     padding: 2rem;
-    background: #fff;
+    background: var(--white);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -304,18 +310,6 @@ footer {
     color: var(--secondary-color);
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
 /* Mobile Menu */
 .mobile-menu {
     display: none;
@@ -333,31 +327,28 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .mobile-menu {
-        display: flex;
+    header {
+        height: 60px;
+        padding: 5px 3%;
     }
 
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        flex-direction: column;
-        padding: 1rem;
-        text-align: center;
+    .logo img {
+        height: 50px;
     }
 
-    .nav-links.active {
-        display: flex;
+    .school-name {
+        font-size: 1.5rem;
     }
+}
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+#staff {
+    padding-top: 150px; /* Adjust based on your header height */
+}
 
-    .hero-content p {
-        font-size: 1.2rem;
-    }
+#faculty {
+    padding-top: 150px; /* Adjust based on your header height */
+}
+
+#alumni {
+    padding-top: 150px; /* Adjust based on your header height */
 }

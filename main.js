@@ -9,19 +9,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Smooth Scrolling for Navigation Links
+    // Smooth Scrolling for Navigation Links with Offset to prevent hiding under header
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
+
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
+                const headerOffset = document.querySelector("header").offsetHeight; // Get header height
+                const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerOffset + 65; // Adjust -20px for extra spacing
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
 
                 // Close mobile menu after clicking a link (for mobile users)
-                navLinks.classList.remove("active");
+                document.querySelector(".nav-links").classList.remove("active");
             }
         });
     });
+
 
     // Active Navigation Link Highlight on Scroll
     const sections = document.querySelectorAll("section");
@@ -30,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         let current = "";
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+            const sectionTop = section.offsetTop - 55;
             const sectionHeight = section.clientHeight;
             if (pageYOffset >= sectionTop - 60) {
                 current = section.getAttribute("id");

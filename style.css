@@ -53,7 +53,7 @@ header {
 }
 
 .logo img {
-    height: 90px; /* Adjust the logo size */
+    height: 100px; /* Adjust the logo size */
     width: auto;
     margin-right: 20px; /* Space between logo and name */
 }
@@ -202,48 +202,33 @@ header {
     padding-left: 1.5rem;
 }
 
-/* Faculty Section */
-.faculty-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.faculty-card {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.faculty-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-/* Alumni Section */
-.alumni-slider {
+/* People Section */
+.people-grid {
     display: flex;
     gap: 2rem;
-    overflow-x: auto;
-    padding: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.alumni-card {
-    min-width: 300px;
+.people-card {
     text-align: center;
-    padding: 1.5rem;
-    background: var(--white);
+    padding: 2rem;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 350px;
 }
 
-.alumni-card img {
-    width: 100px;
-    height: 100px;
+.people-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.people-card img {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin-bottom: 1rem;
 }

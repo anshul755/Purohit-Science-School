@@ -97,3 +97,4 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 });
+

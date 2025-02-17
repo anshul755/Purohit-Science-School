@@ -14,7 +14,10 @@
             <div class="logo">
                 <a href="#home">
                     <img src="images/logo.png" alt="Purohit Science School Logo">
-                    <span class="school-name"><h3>Purohit Science School, Jamnagar.</h3><h6>One Team, One Dream.</h6></span>
+                    <span class="school-name">
+                        <h3>Purohit Science School, Jamnagar.</h3>
+                        <h6>One Team, One Dream.</h6>
+                    </span>
                 </a>
             </div>
             <ul class="nav-links">
@@ -36,8 +39,8 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 id="hero-title">Welcome!</h1>
-                <p id="hero-subtitle">Unlocking the Wonders of Science</p>
+                <h1 class="hero-title" style="font-weight: bold; justify-content: center; display: flex;">Welcome!</h1>
+                <p class="hero-subtitle" style="font-weight: bold; justify-content: center; display: flex;">Unlocking the Wonders of Science</p>
                 <a href="#about" class="cta-button">Explore Now</a>
             </div>
         </section>
@@ -45,12 +48,10 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const hour = new Date().getHours();
-                const title = document.getElementById("hero-title");
-                const subtitle = document.getElementById("hero-subtitle");
-
+        
                 let titleText = "";
                 let subtitleText = "";
-
+        
                 if (hour < 12 && hour >= 6) {
                     titleText = "Good Morning! Welcome to Purohit Science School";
                     subtitleText = "Start Your Day with Knowledge";
@@ -65,28 +66,46 @@
                     subtitleText = "Knowledge Never Sleeps, and Neither Do We";
                 }
 
-                function typeWriterEffect(element, text, speed, callback) {
-                    let i = 0;
-                    function type() {
-                        if (i < text.length) {
-                            element.innerHTML += text.charAt(i);
-                            i++;
-                            setTimeout(type, speed);
-                        } else if (callback) {
-                            setTimeout(callback, 500); // Small delay before the next text starts
-                        }
+                const titleElement = document.querySelector(".hero-title");
+                if(titleElement) titleElement.innerHTML="";
+
+                let j=0;
+
+                function type() {
+                    
+                    if (titleElement && j < titleText.length) {
+                        titleElement.innerHTML += titleText.charAt(j);
+                        j++;
+                        setTimeout(type, 50);
                     }
-                    type();
                 }
 
-                title.innerHTML = ""; // Clear existing text
-                subtitle.innerHTML = "";
+                const subtitleElement = document.querySelector(".hero-subtitle");
 
-                typeWriterEffect(title, titleText, 50, function () {
-                    typeWriterEffect(subtitle, subtitleText, 30);
-                });
+                if (subtitleElement) subtitleElement.innerHTML = "";
+        
+                let i = 0;
+        
+                function typeWriterEffect() {
+                    
+                    if (subtitleElement && i < subtitleText.length) {
+                        subtitleElement.innerHTML += subtitleText.charAt(i);
+                        i++;
+                        setTimeout(typeWriterEffect, 75);
+                    } else {
+                        setTimeout(() => {
+                            if (subtitleElement) subtitleElement.innerHTML = "";
+                            i = 0;
+                            typeWriterEffect();
+                        }, 1000);
+                    }
+                }
+
+                type();
+                typeWriterEffect();
             });
         </script>
+        
 
         <!-- About Section -->
         <section id="about" class="section">

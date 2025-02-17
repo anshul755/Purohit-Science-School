@@ -14,17 +14,14 @@
             <div class="logo">
                 <a href="#home">
                     <img src="images/logo.png" alt="Purohit Science School Logo">
-                    <span class="school-name">Purohit Science School <br>
-                        <h6>One Team, One Dream.</h6>
-                    </span>
+                    <span class="school-name">Purohit Science School, Jamnagar. <br>One Team, One Dream.</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#streams">Streams</a></li>
-                <li><a href="#faculty">Faculty</a></li>
-                <li><a href="#alumni">Alumni</a></li>
+                <li><a href="#people">People</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-menu">
@@ -128,52 +125,24 @@
             </div>
         </section>
 
-        <!-- Faculty Section -->
-        <section id="faculty" class="section">
-            <h2>Our Faculty</h2>
-            <div class="faculty-grid">
-                <div class="faculty-card">
-                    <img src="https://placehold.co/200x200" alt="Faculty Member">
-                    <h3>Dr. John Smith</h3>
-                    <p>Head of Science Department</p>
-                    <p>Ph.D. in Physics</p>
+        <!-- People Section -->
+        <section id="people" class="section">
+            <h2>Meet Our People</h2>
+            <div class="people-grid">
+                <div class="people-card" data-page="staff.html">
+                    <img src="images/staff-icon.jpeg" alt="Staff">
+                    <h3>Staff</h3>
+                    <p>Meet our dedicated administrative and support team.</p>
                 </div>
-                <div class="faculty-card">
-                    <img src="https://placehold.co/200x200" alt="Faculty Member">
-                    <h3>Prof. Sarah Johnson</h3>
-                    <p>Computer Science Lead</p>
-                    <p>M.Tech in Computer Science</p>
+                <div class="people-card" data-page="faculty.html">
+                    <img src="images/faculty-icon.jpg" alt="Faculty">
+                    <h3>Faculty</h3>
+                    <p>Explore our experienced faculty members.</p>
                 </div>
-                <div class="faculty-card">
-                    <img src="https://placehold.co/200x200" alt="Faculty Member">
-                    <h3>Dr. Michael Brown</h3>
-                    <p>Mathematics Department</p>
-                    <p>Ph.D. in Mathematics</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Alumni Section -->
-        <section id="alumni" class="section">
-            <h2>Alumni Success Stories</h2>
-            <div class="alumni-slider">
-                <div class="alumni-card">
-                    <img src="https://placehold.co/150x150" alt="Alumni">
-                    <h3>Jane Wilson</h3>
-                    <p>Batch of 2015</p>
-                    <p>Research Scientist at NASA</p>
-                </div>
-                <div class="alumni-card">
-                    <img src="https://placehold.co/150x150" alt="Alumni">
-                    <h3>Robert Chen</h3>
-                    <p>Batch of 2016</p>
-                    <p>Software Engineer at Google</p>
-                </div>
-                <div class="alumni-card">
-                    <img src="https://placehold.co/150x150" alt="Alumni">
-                    <h3>Emily Davis</h3>
-                    <p>Batch of 2017</p>
-                    <p>Data Scientist at Microsoft</p>
+                <div class="people-card" data-page="alumni.html">
+                    <img src="images/alumni-icon.jpeg" alt="Alumni">
+                    <h3>Alumni</h3>
+                    <p>See the success stories of our alumni.</p>
                 </div>
             </div>
         </section>
@@ -183,15 +152,31 @@
             <h2>Contact Us</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> 123 Education Street, Science City</p>
-                    <p><strong>Phone:</strong> (123) 456-7890</p>
-                    <p><strong>Email:</strong> info@Purohitscienceschool.com</p>
+                    <p>
+                    <h4><strong>Main Branch:</strong></h4>
+                    <a href="https://maps.app.goo.gl/wQ7Q1eRixwPUyg5XA" target="_blank" rel="noopener noreferrer">
+                        Mehulnagar, Nr. pragatipark, Jamnagar, 80 Feet Road, Jamnagar, Gujarat 361006
+                    </a>
+                    </p>
+                    <p>
+                    <h4><strong>Samarpan Branch:</strong> </h4>
+                    <a href="https://maps.app.goo.gl/r2oDngt7epDLdswV7" target="_blank" rel="noopener noreferrer">
+                        Samarpan Circle, Vasa Vira Society, Ajanta Society, Jamnagar, Gujarat 361005
+                    </a>
+                    </p>
+                    <p>
+                    <h4><strong>Sunshine Branch:</strong> </h4>
+                    <a href="https://maps.app.goo.gl/VFWTP2qVx3BSdj6b9" target="_blank" rel="noopener noreferrer">
+                        Phase 2, Valkeshwari, Park Colony, Jamnagar, Gujarat 361008
+                    </a>
+                    </p>
+                    <p><strong>Phone:</strong> 9512812836</p>
+                    <p><strong>Email:</strong> shivamramoliya2005@gmail.com</p>
                 </div>
                 <form id="contact-form" class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                    <input id="name" type="text" placeholder="Your Name" required>
+                    <input id="email" type="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>

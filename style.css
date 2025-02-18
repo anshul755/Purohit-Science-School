@@ -161,6 +161,14 @@ section {
     font-size: 2.5rem;
 }
 
+.section h5 {
+    margin-top: -3.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
 /* About Section */
 .about-content {
     display: flex;
@@ -199,12 +207,13 @@ section {
     background: var(--white);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .stream-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 .stream-card h3 {
@@ -233,7 +242,7 @@ section {
 
 .people-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .people-card img {
@@ -259,17 +268,20 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     width: 250px;
+    text-transform: uppercase;
 }
 
 .people-card2:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .people-card2 img {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
+    align-items: center;
+    width: 175px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -288,13 +300,13 @@ section {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
+    padding: 2rem;
+    border: 3px solid #ddd;
     border-radius: 5px;
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 300px;
 }
 
 .submit-btn {
@@ -539,15 +551,16 @@ a:hover svg {
 }
 
 .people-branch h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-weight: bold;
+    margin-top: 0.5rem;
 }
 
 .people-branch h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 1.5rem;

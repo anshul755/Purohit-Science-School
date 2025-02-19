@@ -20,6 +20,10 @@ body {
     color: var(--text-color);
 }
 
+.imgsir{
+    border-radius: 50%;
+}
+
 /* Header and Navigation */
 header {
     position: fixed;
